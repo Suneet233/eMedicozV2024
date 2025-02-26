@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="grouping">
+	
+	<groups>
+		
+		<run>
+			
+			<include name="Master"/>
+			<!--include name="Regression"/> -->
+			<!--include name="Sanity"/> -->
+				
+			<!--exclude name=""/> -->	
+			
+			
+		</run>
+		
+	</groups>
+	
+  <test thread-count="5" name="Test">
+	
+	<parameter name="os" value = "Windows" />
+	
+	<parameter name="browser" value = "Chrome" />
+    <classes>
+      <class name="testCases.TC0000_RandomAccountRegistrationPage2andAddLoggerandCrossBrowserandConfligFiles2andGroups"/>
+      <class name="testCases.Tc003_LoginDDT2andGroups"/>
+      <class name="testCases.TC0001_LoginTest2AddGroups"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

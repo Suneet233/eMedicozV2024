@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<groups>
+		
+		<run>
+			
+			<include name="Sanity"/>
+			<!--include name="Regression"/> -->
+			<!--include name="Master"/> -->
+				
+			<!--exclude name=""/> -->	
+			
+		</run>
+		
+
+		</groups>
+		
+		
+		<!--
+		
+		Yaha pe hune utilities file ka naam diya hai
+		
+		-->
+		
+		<listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+         </listeners>
+         
+         <parameter name="os" value = "Windows" />
+	
+	<parameter name="browser" value = "Chrome" />
+	
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testCases.TC000009_LoginTest2AddGroups2andExtendReportsManager2afterGridTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
